@@ -107,7 +107,7 @@ fastify.post('/upload', async (request, reply) => {
       fileName,
       environment: env,
       folder: folderName,
-      url: `https://cdn.citydash.kz/${folderName}/${fileName}`,
+      url: `https://cdn.citydash.me/${folderName}/${fileName}`,
     });
   } catch (error) {
     fastify.log.error(error);
@@ -152,7 +152,7 @@ fastify.post<{
       fileName: safeFileName,
       environment,
       folder: folderName,
-      url: `https://cdn.citydash.kz/${folderName}/${safeFileName}`,
+      url: `https://cdn.citydash.me/${folderName}/${safeFileName}`,
     });
   } catch (error) {
     fastify.log.error(error);
