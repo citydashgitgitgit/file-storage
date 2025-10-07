@@ -1,0 +1,28 @@
+{
+  "name": "cdn-file-storage",
+  "version": "1.0.0",
+  "description": "High-performance file storage server",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "pm2:start": "pm2 start ecosystem.config.js",
+    "pm2:stop": "pm2 stop cdn-storage",
+    "pm2:restart": "pm2 restart cdn-storage",
+    "pm2:reload": "pm2 reload cdn-storage",
+    "pm2:delete": "pm2 delete cdn-storage",
+    "pm2:logs": "pm2 logs cdn-storage",
+    "pm2:monit": "pm2 monit"
+  },
+  "dependencies": {
+    "fastify": "^4.28.1",
+    "@fastify/multipart": "^8.3.0",
+    "@fastify/static": "^7.0.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.10",
+    "typescript": "^5.5.3",
+    "tsx": "^4.16.2"
+  }
+}
